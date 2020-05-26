@@ -20,8 +20,8 @@ public class ServerStartPanel extends JFrame {
 
 
 
-        JButton btnSearch = new JButton("Start Server");
-        btnSearch.setBounds(150,30,150,30);
+        JButton buttonStart = new JButton("Start Server");
+        buttonStart.setBounds(150,30,150,30);
 
 
         JLabel showConected = new JLabel();
@@ -38,9 +38,9 @@ public class ServerStartPanel extends JFrame {
             public void keyReleased(KeyEvent event) {
 
                 if ((!port.getText().equals(""))) {
-                    btnSearch.setEnabled(true);
+                    buttonStart.setEnabled(true);
                 } else {
-                    btnSearch.setEnabled(false);
+                    buttonStart.setEnabled(false);
                 }
 
                 if (event.getKeyChar() >= '0' && event.getKeyChar() <= '9') {
@@ -48,7 +48,7 @@ public class ServerStartPanel extends JFrame {
 
                 } else {
                     port.setText("");
-                    btnSearch.setEnabled(false);
+                    buttonStart.setEnabled(false);
 
                 }
 
@@ -56,10 +56,10 @@ public class ServerStartPanel extends JFrame {
         });
 
 
-        executeButton( factory, showConected, port, btnSearch);
+        executeButton( factory, showConected, port, buttonStart);
 
         panel.add(port);
-        panel.add(btnSearch);
+        panel.add(buttonStart);
 
         this.add(panel);
 
@@ -76,22 +76,10 @@ public class ServerStartPanel extends JFrame {
     }
 
 
-    private void executeButton( ServiceFactory factory, JLabel showConected, JTextField port, JButton btnSearch){
+    private void executeButton( ServiceFactory factory, JLabel showConected, JTextField port, JButton buttonStart){
 
-        Runnable task1 = () -> {
 
-            if(btnSearch.getText().equals("Disconnect")){
-                System.exit(0);
-            }
-            showConected.setText(" Conected PORT ====>  " + port.getText());
-
-            factory.getServidor().port(Integer.parseInt(port.getText()));
-
-            btnSearch.setText("Disconnect");
-            port.setEditable(false);
-
-        };
-        Runnable task2 = () -> {
+        Runnable task = () -> {
             try {
                 factory.getServidor().start(factory);
             } catch (NumberFormatException | IOException o) {
@@ -99,13 +87,24 @@ public class ServerStartPanel extends JFrame {
             }
         };
 
-        btnSearch.addActionListener(e -> {
-            Thread thread = new Thread(task1);
-            thread.start();
-            Thread thread2 = new Thread(task2);
-            thread2.start();
 
-        });
+        buttonStart.addActionListener(e -> {
+          try{
+              factory.getServidor().port(Integer.parseInt(port.getText()));
+              showConected.setText(" Conected PORT ====>  " + port.getText());
+              if(buttonStart.getText().equals("Disconnect")){
+                  System.exit(0);
+              }
+              buttonStart.setText("Disconnect");
+
+              Thread thread = new Thread(task);
+              thread.start();
+              thread.sleep(500);
+
+          }catch(Exception ex) {
+                ex.printStackTrace();
+          }
+      });
 
     }
 }

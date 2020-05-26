@@ -9,7 +9,7 @@ public class AppPrincipal {
     public static void main(String[] args)  throws Exception {
 
         ServiceFactory factory = ServiceFactory.getInstance();
-        ServerStartPanel startApp = new ServerStartPanel(factory);
+        new ServerStartPanel(factory);
 
 
     }

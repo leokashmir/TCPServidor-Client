@@ -31,7 +31,7 @@ public class Servidor {
         String clientSentence ="";
 
         ServerSocket welcomeSocket = new ServerSocket(port);
-    
+
         while (true) {
             Socket connectionSocket = welcomeSocket.accept();
             System.out.println("Conexao aceita….");
