@@ -1,0 +1,14 @@
+# IDEs and editors
+AppServer/.idea/
+AppClient/.idea/
+
+
+#files
+gradlew.bat
+AppServer/build/
+
+AppClient/build/
+
+AppServer/.gradle/
+
+AppClient/.gradle/
