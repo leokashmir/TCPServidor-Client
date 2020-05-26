@@ -80,10 +80,13 @@ public class ServerStartPanel extends JFrame {
 
         Runnable task1 = () -> {
 
-            showConected.setText(" Conected PORT ====>  " + port.getText());
             if(btnSearch.getText().equals("Disconnect")){
                 System.exit(0);
             }
+            showConected.setText(" Conected PORT ====>  " + port.getText());
+
+            factory.getServidor().port(Integer.parseInt(port.getText()));
+
             btnSearch.setText("Disconnect");
             port.setEditable(false);
 
