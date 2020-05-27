@@ -20,10 +20,10 @@ OBS: 1. O comprimento da query e payload não deve considerar o ':' separador.
      
 *Exemplo:*<br>
 Consulta: Star Trek <br>
--Request =>  9:Star Trek
+- Request =>  9:Star Trek
 
 Resposta: Star Trek O Filme <br>
--Response =>  17:Star Trek O Filme
+- Response =>  17:Star Trek O Filme
 
 
 ## Tecnologias
@@ -39,7 +39,7 @@ Resposta: Star Trek O Filme <br>
 
 ###### Java Instalado?
 
--Você precisa ter o Java instalado em seu computador. Caso contrario, sera necessario instala-lo.</br> Link para fazer o donwload da instalação https://www.oracle.com/technetwork/java/javase/overview/index.html </br> Selecione o arquivo, conforme seu sistema operacional.
+- Você precisa ter o Java instalado em seu computador. Caso contrario, sera necessario instala-lo.</br> Link para fazer o donwload da instalação https://www.oracle.com/technetwork/java/javase/overview/index.html </br> Selecione o arquivo, conforme seu sistema operacional.
 Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalação.
 
 
