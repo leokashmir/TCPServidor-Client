@@ -44,7 +44,7 @@ Resposta: Star Trek O Filme <br>
 
 1. Em seu Windows 10, clique na Lupa e digite "cmd".
 2. Em seguida clique sobre a "Prompt de Comando"
-3. Digite java -version
+3. Digite *java -version* e aperte *"Enter"*
  
 Se o retorno for algo similar a isto:<br>
 java version "1.8.0_211"<br>
