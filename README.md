@@ -2,8 +2,8 @@
 ###### Projeto Basico para um Servidor TCP 
 Este projeto tem como objetivo a criação de um Servidor TCP, onde ao inicia-lo é possivel definir a porta a ser utilizado.
 
-O Objetivo deste servidor é esta apto a atender diversos serviços sendo executados em varias portas. 
-A principio jã tem um serviço implementado para testes. Este serviço serviço realiza uma busca por Titulos de Filmes no site do IMDB 
+O Objetivo deste servidor é estar apto a atender diversos serviços sendo executados em varias portas. 
+A principio já tem um serviço implementado para testes. Este serviço serviço realiza uma busca por Titulos de Filmes no site do IMDB 
 (https://www.imdb.com), caso haja alguma alteração no layout do site, possivelmente este serviço não mais será valido.
 
 ## Servico "Busca de Titulos de Filmes"
