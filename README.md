@@ -39,7 +39,21 @@ Resposta: Star Trek O Filme <br>
 
 ###### Java Instalado?
 
-- Você precisa ter o Java instalado em seu computador. Caso contrario, sera necessario instala-lo.</br> Link para fazer o donwload da instalação https://www.oracle.com/technetwork/java/javase/overview/index.html </br> Selecione o arquivo, conforme seu sistema operacional.
+
+- Verificando se o java esta instalado
+
+1. Em seu Windows 10, clique na Lupa e digite "cmd".
+2. Em seguida clique sobre a "Prompt de Comando"
+3. Digite java -version
+ 
+Se o retorno for algo similar a isto:<br>
+java version "1.8.0_211"<br>
+Java(TM) SE Runtime Environment (build 1.8.0_211-b12)<br>
+Java HotSpot(TM) 64-Bit Server VM (build 25.211-b12, mixed mode)<br>
+
+O java esta instalado em seu PC.<br>
+ 
+Caso contrario, sera necessario instala-lo.</br> Link para fazer o donwload da instalação https://www.oracle.com/technetwork/java/javase/overview/index.html </br> Selecione o arquivo, conforme seu sistema operacional.
 Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalação.
 
 
@@ -52,7 +66,9 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalaç�
  2. Vá até o Projeto
  3. Na Raiz do Projeto existe a Pasta **VersaoAtual** Acesse ela.
  4. Dentro da pasta, existem 4 arquivos: ** AppClient-1.0.jar, AppServer-1.0.jar, startClient.bat, startServer.bat **
- 5. Faça o Donwload deles.
+ 5. Clique sobre um arquivo
+ 6. Uma nova pagina sera aberta, clique no botão donwload
+ 7. repita a operação com os demais arquivos
  
  **Passo 2 Iniciando o Servidor**
  
