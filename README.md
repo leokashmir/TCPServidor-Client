@@ -108,6 +108,6 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
 |  AppServer  |  1.0     |
   
   
-  **Contatos**
+  **Contato**
 * leonardobarrosbhz@gmail.com 
   
