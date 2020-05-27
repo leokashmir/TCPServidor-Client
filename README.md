@@ -73,7 +73,7 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalaç�
  7. Pronto.
   >Obs: Você pode realizar um teste, com o Titulo "Star Trek" a pesquisa irá retornar uma lista de titulos.
  
- **Passo 3.1 Testar atraves de outro client**
+ **Passo 3.1 Testar atraves de outro client**<br>
  Você poder realizar teste de diversos clients, desde que consiga enviar o request conforme o *paylod* *\<query length\>:\<query\>*.
  Um exemplo com Telnet no Windows. Por padrão, o Telnet vem desabilitado nas versões mais novas do windows, aqui um passo a passo para habilita-lo:
  
@@ -100,8 +100,14 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalaç�
  - O retorno sera este => *6098:┬ÂJornada nas Estrelas┬Â┬ÂStar Trek┬Â┬ÂJornada nas Estrelas: O Filme┬Â┬ÂJornada nas Estrelas: A Nova GeraþÒo┬Â┬ÂStar Trek: Discovery┬Â┬ÂStar Trek: Picard┬Â┬ÂJornada nas Estrelas: Deep Space Nine┬Â┬ÂJornada nas Estrelas: Voyager┬Â┬ÂJornada nas Estrelas: Enterprise┬Â┬ÂStar Trek: Short Treks ...*
  
  
- 
- 
+  ## Suporte
   
- 
+| Componente  |  Versão  |
+| ------------| ---------|
+|  AppClient  |  1.0     |
+|  AppServer  |  1.0     |
+  
+  
+  **Contatos**
+* leonardobarrosbhz@gmail.com 
   
