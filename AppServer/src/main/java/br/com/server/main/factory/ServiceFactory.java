@@ -15,28 +15,28 @@ import com.google.inject.Injector;
 
 public final class ServiceFactory {
 
-    private static ServiceFactory INSTANCE;
+    private static ServiceFactory instance;
 
 
     public static ServiceFactory getInstance() {
-        if(INSTANCE == null) {
-            INSTANCE = new ServiceFactory();
+        if(instance == null) {
+            instance = new ServiceFactory();
         }
-        return INSTANCE;
+        return instance;
     }
 
 
-    Injector injectorServidor = Guice.createInjector(new ServidorModule());
-    Servidor servidor = injectorServidor.getInstance(Servidor.class);
+    private Injector injectorServidor = Guice.createInjector(new ServidorModule());
+    private Servidor servidor = injectorServidor.getInstance(Servidor.class);
 
-    Injector injectorPayLoadIn = Guice.createInjector(new PayLoadInModule());
-    PayLoadIn loadIn = injectorPayLoadIn.getInstance(PayLoadIn.class);
+    private Injector injectorPayLoadIn = Guice.createInjector(new PayLoadInModule());
+    private PayLoadIn loadIn = injectorPayLoadIn.getInstance(PayLoadIn.class);
 
-    Injector injectorPayLoadOut = Guice.createInjector(new PayLoadOutModule());
-    PayLoadOut loadOut = injectorPayLoadOut.getInstance(PayLoadOut.class);
+    private Injector injectorPayLoadOut = Guice.createInjector(new PayLoadOutModule());
+    private PayLoadOut loadOut = injectorPayLoadOut.getInstance(PayLoadOut.class);
 
-    Injector injectorImdbService = Guice.createInjector(new ImdbServiceModule());
-    ImdbService imdbService = injectorImdbService.getInstance(ImdbService.class);
+    private Injector injectorImdbService = Guice.createInjector(new ImdbServiceModule());
+    private ImdbService imdbService = injectorImdbService.getInstance(ImdbService.class);
 
 
     public PayLoadIn getLoadIn() {

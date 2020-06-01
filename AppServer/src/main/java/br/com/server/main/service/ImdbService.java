@@ -23,11 +23,11 @@ public class ImdbService {
 
     public String listFilms(String sentece) throws IOException {
 
-        String url = this.urlEncoded(sentece);
+        final String url = this.urlEncoded(sentece);
 
-        Document doc = Jsoup.connect(url).get();
-        List<Element> el =  doc.body().getElementsByTag("td");
-        StringBuilder lsTitleFilms = new StringBuilder();
+        final Document doc = Jsoup.connect(url).get();
+        final List<Element> el =  doc.body().getElementsByTag("td");
+        final StringBuilder lsTitleFilms = new StringBuilder();
 
        el.forEach(e -> {
             e.getElementsByTag("a").forEach( a -> lsTitleFilms.append(a.text()).append("¶"));
@@ -41,9 +41,9 @@ public class ImdbService {
 
         try{
 
-            String newSentece = removeCharacters(sentece);
+            final String newSentece = removeCharacters(sentece);
 
-            StringBuilder creatUrl = new StringBuilder(Constants.SITE_ROOT);
+            final StringBuilder creatUrl = new StringBuilder(Constants.SITE_ROOT);
             creatUrl.append("find?q=")
                     .append(URLEncoder.encode(newSentece, String.valueOf(StandardCharsets.UTF_8)))
                     .append("&s=tt&ref_=fn_al");
@@ -51,8 +51,10 @@ public class ImdbService {
             return  creatUrl.toString();
 
         }catch( IOException e){
-            throw  new  IOException("Erro ao montar a url.");
+             e.printStackTrace();
         }
+
+        throw  new  IOException("Erro ao montar a url.");
     }
 
 
@@ -66,7 +68,7 @@ public class ImdbService {
         nfdNormalizedString = nfdNormalizedString.replace("%", "");
         nfdNormalizedString = Normalizer.normalize(nfdNormalizedString, Normalizer.Form.NFD);
 
-        Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
+        final Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
         return pattern.matcher(nfdNormalizedString).replaceAll("");
     }
 }

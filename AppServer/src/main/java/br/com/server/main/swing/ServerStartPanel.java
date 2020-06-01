@@ -1,14 +1,17 @@
 package br.com.server.main.swing;
 
 import br.com.server.main.factory.ServiceFactory;
-import com.sun.javafx.logging.JFRInputEvent;
+import br.com.server.main.parser.PayLoadIn;
 
 import javax.swing.*;
 import java.awt.event.*;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ServerStartPanel extends JFrame {
 
+    private static final Logger LOG = Logger.getLogger(ServerStartPanel.class.getName());
 
     public ServerStartPanel( ServiceFactory factory){
         super("Start Server");
@@ -102,7 +105,7 @@ public class ServerStartPanel extends JFrame {
               thread.sleep(500);
 
           }catch(Exception ex) {
-                ex.printStackTrace();
+              LOG.log(Level.SEVERE, "Erro ao iniciar o servidor", ex);
           }
       });
 

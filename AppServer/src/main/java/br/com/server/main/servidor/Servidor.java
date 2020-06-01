@@ -2,6 +2,7 @@ package br.com.server.main.servidor;
 
 
 import br.com.server.main.factory.ServiceFactory;
+import br.com.server.main.parser.PayLoadIn;
 import com.google.inject.Inject;
 
 import java.io.BufferedReader;
@@ -10,11 +11,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.logging.Logger;
 
 
 public class Servidor {
 
-
+    private static final Logger LOG = Logger.getLogger(Servidor.class.getName());
 
     private int port;
 
@@ -30,14 +32,14 @@ public class Servidor {
     public void start(ServiceFactory factory) throws IOException {
         String clientSentence ="";
 
-        ServerSocket welcomeSocket = new ServerSocket(port);
+        final ServerSocket welcomeSocket = new ServerSocket(port);
 
         while (true) {
-            Socket connectionSocket = welcomeSocket.accept();
-            System.out.println("Conexao aceita….");
+            final Socket connectionSocket = welcomeSocket.accept();
+            LOG.info("Conexao aceita….");
 
-            BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
-            DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
+            final BufferedReader inFromClient = new BufferedReader(new InputStreamReader(connectionSocket.getInputStream()));
+            final DataOutputStream outToClient = new DataOutputStream(connectionSocket.getOutputStream());
 
 
             try {
@@ -54,12 +56,15 @@ public class Servidor {
                 }
 
             } catch (Exception e) {
-                System.out.println("Erro ao Conectar no Servidor");
-                e.printStackTrace();
-            }
 
+                LOG.info("Erro ao Conectar no Servidor");
+
+            }
+            inFromClient.close();
+            outToClient.close();
+            welcomeSocket.close();
             connectionSocket.close();
-            System.out.println("Conexao fechada");
+            LOG.info("Conexao fechada");
        }
     }
 }

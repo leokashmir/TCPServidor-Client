@@ -6,11 +6,13 @@ import br.com.server.main.swing.ServerStartPanel;
 
 public class AppPrincipal {
 
-    public static void main(String[] args)  throws Exception {
-
-        ServiceFactory factory = ServiceFactory.getInstance();
+    private static void start(){
+        final ServiceFactory factory = ServiceFactory.getInstance();
         new ServerStartPanel(factory);
-
-
     }
+
+
+    public static void main(String[] args)   {
+            AppPrincipal.start();
+      }
 }
