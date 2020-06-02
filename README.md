@@ -1,4 +1,4 @@
-# Servidor TCP
+# Servidor TCP e Client
 ###### Projeto Basico para um Servidor TCP 
 Este projeto tem como objetivo a criação de um Servidor TCP, onde ao inicia-lo é possivel definir a porta a ser utilizado.
 
