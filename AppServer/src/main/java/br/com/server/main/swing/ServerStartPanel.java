@@ -1,7 +1,6 @@
 package br.com.server.main.swing;
 
 import br.com.server.main.factory.ServiceFactory;
-import br.com.server.main.parser.PayLoadIn;
 
 import javax.swing.*;
 import java.awt.event.*;

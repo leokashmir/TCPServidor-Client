@@ -2,7 +2,6 @@ package br.com.server.main.servidor;
 
 
 import br.com.server.main.factory.ServiceFactory;
-import br.com.server.main.parser.PayLoadIn;
 import com.google.inject.Inject;
 
 import java.io.BufferedReader;
@@ -44,14 +43,14 @@ public class Servidor {
 
             try {
                 String sentece = inFromClient.readLine();
-                if (factory.getLoadIn().checkPayLoad(sentece)){
+                if (factory.getPayloadManager().checkPayLoad(sentece)){
 
-                    sentece = factory.getLoadIn().payloadToSentece(sentece);
+                    sentece = factory.getPayloadManager().payloadToSentece(sentece);
                     String listTitlesFilms =  factory.getImdbService().listFilms(sentece);
 
-                    clientSentence = factory.getLoadOut().mountPayLoadOut(listTitlesFilms);
+                    clientSentence = factory.getPayloadManager().mountPayLoadOut(listTitlesFilms);
 
-                    outToClient.writeBytes(clientSentence+ '\n');
+                    outToClient.writeBytes(clientSentence);
 
                 }
 

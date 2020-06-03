@@ -59,16 +59,10 @@ public class ImdbService {
 
 
     private String removeCharacters(String sentece){
-        String nfdNormalizedString = sentece.replace(":", "");
-
-        nfdNormalizedString = nfdNormalizedString.replace("&", "");
-        nfdNormalizedString = nfdNormalizedString.replace("@", "");
-        nfdNormalizedString = nfdNormalizedString.replace("#", "");
-        nfdNormalizedString = nfdNormalizedString.replace("$", "");
-        nfdNormalizedString = nfdNormalizedString.replace("%", "");
-        nfdNormalizedString = Normalizer.normalize(nfdNormalizedString, Normalizer.Form.NFD);
+        sentece = sentece.replaceAll("[:@#$%&]", "");;
+        sentece = Normalizer.normalize(sentece, Normalizer.Form.NFD);
 
         final Pattern pattern = Pattern.compile("\\p{InCombiningDiacriticalMarks}+");
-        return pattern.matcher(nfdNormalizedString).replaceAll("");
+        return pattern.matcher(sentece).replaceAll("");
     }
 }
