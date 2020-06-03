@@ -2,40 +2,42 @@ package br.com.server.main.parser;
 
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.AfterEach;
+
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-public class PayLoadInTest  {
+public class PayLoadManagerTest {
 
-    static PayLoadIn payLoadIn;
+    static PayloadManager payLoad;
 
     @BeforeAll
     public static void beforeAllTests() {
-         payLoadIn = new PayLoadIn();
+         payLoad = new PayloadManager();
     }
 
 
     @Test
     public void CheckPayLoadTestErroString(){
 
-        assertFalse(payLoadIn.checkPayLoad("Teste"));
+        assertFalse(payLoad.checkPayLoad("Teste"));
     }
 
     @Test
     public void payloadToSenteceOKTest(){
         String requestPayLoad = "12:Star Trek: O Filme";
-        assertEquals("Star Trek: O Filme", payLoadIn.payloadToSentece(requestPayLoad));
+        assertEquals("Star Trek: O Filme", payLoad.payloadToSentece(requestPayLoad));
     }
 
     @Test
     public void checkPayLoadOKTest(){
         String requestPayLoad = "18:Star Trek: O Filme";
-        assertTrue(payLoadIn.checkPayLoad(requestPayLoad));
+        assertTrue(payLoad.checkPayLoad(requestPayLoad));
+    }
+
+
+    @Test
+    public void mountPayLoadOutTest(){
+        assertEquals("0:", payLoad.mountPayLoadOut(""));
     }
 }

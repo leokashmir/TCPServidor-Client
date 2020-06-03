@@ -118,10 +118,10 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalaç�
  
   ## Suporte
   
-| Componente  |  Versão  |
-| ------------| ---------|
-|  AppClient  |  1.0     |
-|  AppServer  |  1.0     |
+| Componente  |  Versão  | Data     |
+| ------------| ---------|----------|
+|  AppClient  |  1.0     | 26/05/20 |
+|  AppServer  |  1.1     | 02/06/20 |
   
   
   **Contato**
