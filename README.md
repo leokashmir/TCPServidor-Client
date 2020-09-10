@@ -128,8 +128,11 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
 * leonardobarrosbhz@gmail.com 
 
 ...
+
 |-- app
+
      |-- modules
+     
        |-- home
            |-- [+] components
            |-- home-routing.module.ts
@@ -140,8 +143,8 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
            |-- relatorios.module.ts
 	   |-- Outros Modulos 
 		
-		
      |-- core
+     
        |-- [+] authentication
        |-- [+] footer
        |-- [+] guards
@@ -152,15 +155,18 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
        |-- core.module.ts
        |-- ensureModuleLoadedOnceGuard.ts
        |-- logger.service.ts
-     |
+     
      |-- shared
+     
           |-- [+] components
           |-- [+] directives
           |-- [+] pipes
           |-- [+] models
-     |
+     
      |-- [+] configs
+     
 |-- assets
+
      |-- scss
           |-- [+] partials
           |-- base.scss
