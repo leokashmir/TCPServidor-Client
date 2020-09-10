@@ -126,4 +126,43 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
   
   **Contato**
 * leonardobarrosbhz@gmail.com 
+
+
+|-- app
+     |-- modules
+       |-- home
+           |-- [+] components
+           |-- home-routing.module.ts
+           |-- home.module.ts
+	   |-- relatorios
+           |-- [+] components
+           |-- relatorios-routing.module.ts
+           |-- relatorios.module.ts
+	   |-- ... Outros Modulos 
+		
+		
+     |-- core
+       |-- [+] authentication
+       |-- [+] footer
+       |-- [+] guards
+       |-- [+] interceptors
+       |-- [+] mocks
+       |-- [+] services
+       |-- [+] header
+       |-- core.module.ts
+       |-- ensureModuleLoadedOnceGuard.ts
+       |-- logger.service.ts
+     |
+     |-- shared
+          |-- [+] components
+          |-- [+] directives
+          |-- [+] pipes
+          |-- [+] models
+     |
+     |-- [+] configs
+|-- assets
+     |-- scss
+          |-- [+] partials
+          |-- _base.scss
+          |-- styles.scss
   
