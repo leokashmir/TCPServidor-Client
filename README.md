@@ -127,9 +127,10 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
   **Contato**
 * leonardobarrosbhz@gmail.com 
 
-...
 
-|-- app
+->
+
+    |-- app
 
      |-- modules
      
@@ -143,33 +144,32 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
            |-- relatorios.module.ts
 	   |-- Outros Modulos 
 		
-     |-- core
+      |-- core
      
-       |-- [+] authentication
-       |-- [+] footer
-       |-- [+] guards
-       |-- [+] interceptors
-       |-- [+] mocks
-       |-- [+] services
-       |-- [+] header
-       |-- core.module.ts
-       |-- ensureModuleLoadedOnceGuard.ts
-       |-- logger.service.ts
+           |-- [+] authentication
+           |-- [+] footer
+           |-- [+] guards
+           |-- [+] interceptors
+           |-- [+] mocks
+           |-- [+] services
+           |-- [+] header
+           |-- core.module.ts
+           |-- ensureModuleLoadedOnceGuard.ts
+           |-- logger.service.ts
      
      |-- shared
      
-          |-- [+] components
-          |-- [+] directives
-          |-- [+] pipes
-          |-- [+] models
+           |-- [+] components
+           |-- [+] directives
+           |-- [+] pipes
+           |-- [+] models
      
      |-- [+] configs
      
-|-- assets
-
-     |-- scss
+     |-- assets
+      |-- scss
           |-- [+] partials
           |-- base.scss
           |-- styles.scss
-...
+
   
