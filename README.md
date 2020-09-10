@@ -127,49 +127,12 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalaç�
   **Contato**
 * leonardobarrosbhz@gmail.com 
 
-
-->
-
-    |-- app
-
-     |-- modules
-     
-       |-- home
-           |-- [+] components
-           |-- home-routing.module.ts
-           |-- home.module.ts
-	   |-- relatorios
-           |-- [+] components
-           |-- relatorios-routing.module.ts
-           |-- relatorios.module.ts
-	   |-- Outros Modulos 
-		
-      |-- core
-     
-           |-- [+] authentication
-           |-- [+] footer
-           |-- [+] guards
-           |-- [+] interceptors
-           |-- [+] mocks
-           |-- [+] services
-           |-- [+] header
-           |-- core.module.ts
-           |-- ensureModuleLoadedOnceGuard.ts
-           |-- logger.service.ts
-     
-     |-- shared
-     
-           |-- [+] components
-           |-- [+] directives
-           |-- [+] pipes
-           |-- [+] models
-     
-     |-- [+] configs
-     
-     |-- assets
-      |-- scss
-          |-- [+] partials
-          |-- base.scss
-          |-- styles.scss
-
+ ## Modulos do Projeto
   
+| Modulos     |  Descrição  | 
+| ------------| ------------|
+|  Core		  |  Este module deve conter componentes universais, serviços e recursos de instância única. |     
+|  Modules    |  Onde serão criados todos os componentes da aplicação |     
+|  Shared     |  Possue todos os componentes que são compartilhados na pela aplicação |   
+|  Configs    |  Possui arquivos de configuração |    
+|  assets     |  Arquivos de Stylos e imagens da aplicação |  
