@@ -127,7 +127,7 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
   **Contato**
 * leonardobarrosbhz@gmail.com 
 
-
+...
 |-- app
      |-- modules
        |-- home
@@ -138,7 +138,7 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
            |-- [+] components
            |-- relatorios-routing.module.ts
            |-- relatorios.module.ts
-	   |-- ... Outros Modulos 
+	   |-- Outros Modulos 
 		
 		
      |-- core
@@ -163,6 +163,7 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntala√ß√
 |-- assets
      |-- scss
           |-- [+] partials
-          |-- _base.scss
+          |-- base.scss
           |-- styles.scss
+...
   
