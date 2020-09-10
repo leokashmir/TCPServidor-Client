@@ -127,12 +127,4 @@ Depois de baixar o arquivo JDK, basta executa-lo e seguir os passo da isntalaç�
   **Contato**
 * leonardobarrosbhz@gmail.com 
 
- ## Modulos do Projeto
-  
-| Modulos     |  Descrição  | 
-| ------------| ------------|
-|  Core		  |  Este module deve conter componentes universais, serviços e recursos de instância única. |     
-|  Modules    |  Onde serão criados todos os componentes da aplicação |     
-|  Shared     |  Possue todos os componentes que são compartilhados na pela aplicação |   
-|  Configs    |  Possui arquivos de configuração |    
-|  assets     |  Arquivos de Stylos e imagens da aplicação |  
+
